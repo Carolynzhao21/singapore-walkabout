@@ -4830,7 +4830,7 @@ function cineToMenu(){const c=$("#cine");if(!c)return;c.classList.add("menu");$(
 function cineSkip(){if(CINE.done)return;CINE.done=true;clearTimeout(CINE.timer);clearInterval(CINE.typing);cineTitle()}
 
 function cineBoot(had){
- if(new URLSearchParams(location.search).has("nointro"))return;
+ if(!new URLSearchParams(location.search).has("intro"))return;
  const c=cineBuild();cineParticles();cinePreload();
  const seen=had&&S.words&&Object.keys(S.words).length;
  const gate=c.querySelector(".cgate");

@@ -37,6 +37,10 @@ PATCHES = [
      '<div class="cseal">狮<br>城</div>\n    <h1>${[..."狮城漫步"].map('),
     ('<div class="csub">TAIPEI&nbsp;WALKABOUT</div>', '<div class="csub">SINGAPORE&nbsp;WALKABOUT</div>'),
     ('<div class="cgate"><div class="clant"></div><b>台北漫步</b>', '<div class="cgate"><div class="clant"></div><b>狮城漫步</b>'),
+    # TEMPORARY: skip the opening film unless the address has ?intro (its pictures are Taipei's and are removed
+    # until Singapore art exists). Without this the film is only characters on black.
+    ('if(new URLSearchParams(location.search).has("nointro"))return;',
+     'if(!new URLSearchParams(location.search).has("intro"))return;'),
     # own save slot, so it never mixes with a Taipei Walkabout save
     ('const KEY="tpe-life-v1";', 'const KEY="sgw-life-v1";'),
     # TEMPORARY: pictures, music and voice recordings are loaded from the original Taipei Walkabout site

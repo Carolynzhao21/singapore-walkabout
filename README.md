@@ -10,6 +10,8 @@ Adapted from [Taipei Walkabout](https://cedricboi.github.io/taipei-walkabout/) b
 
 Open `index.html` (or the GitHub Pages link). The first time, the game asks for a **Google Maps API key** with the *Maps JavaScript API* turned on. The key is stored only in your own browser (`localStorage`) and is never part of this repo.
 
+The opening film is skipped for now (its pictures are Taipei's). Add `?intro` to the address to watch it.
+
 Pictures, music and voice recordings are loaded from the original Taipei Walkabout site for now (`<base>` tag added by `build.py`). Remove that patch in `build.py` once this repo has its own `art/`, `music/` and `voice/` folders.
 
 ## How it is built
